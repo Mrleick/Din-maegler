@@ -37,7 +37,7 @@ const StyledLink = styled.a`
   text-decoration: none;
   margin-right: ${marginBetweenLinks};
   display: flex;
-  align-items: center; /* Align the icon vertically */
+  align-items: center;
   & > svg {
     margin-right: 5px;
   }
@@ -48,7 +48,7 @@ const StyledText = styled.p`
   margin: 0;
   cursor: pointer;
   display: flex;
-  align-items: center; /* Align the icon vertically */
+  align-items: center;
 
   & > svg {
     margin-right: 5px;
