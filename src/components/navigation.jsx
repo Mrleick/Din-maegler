@@ -6,6 +6,8 @@ const NavBar = styled.div`
   display: flex;
   height: 90px;
   align-items: center;
+  max-width: 1110px;
+  margin: 0 auto;
 `;
 // Styled-component til logoet
 const LogoImage = styled.img`
