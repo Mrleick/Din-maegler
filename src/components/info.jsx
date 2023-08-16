@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -55,7 +56,7 @@ const StyledText = styled.p`
 `;
 
 // Navbar Component
-function Navbar() {
+function infoBar() {
   return (
     <StyledBar>
       <StyledLogin>
@@ -77,4 +78,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default infoBar;

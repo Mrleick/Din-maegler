@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Navbar from "./components/navbar";
-import "./styles/global.css"; // Assuming this is a CSS file for global styles
+import "./index.css";
+import App from "./App";
 
 const root = document.getElementById("root");
 
 ReactDOM.render(
   <React.StrictMode>
-    <Navbar />
+    <App />
   </React.StrictMode>,
   root
 );

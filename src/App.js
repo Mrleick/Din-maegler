@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "styled-components";
+import logoImage from "./assets/logo.png";
 
-function App() {
+// Styled-components
+const NavBar = styled.div`
+  display: flex;
+  height: 90px;
+  align-items: center;
+`;
+
+const LogoImage = styled.img`
+  width: 269px;
+  height: 49px;
+  cursor: pointer;
+`;
+
+const NavList = styled.ul`
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  flex: 6;
+  justify-content: flex-end;
+`;
+
+const NavA = styled.a`
+  text-decoration: none;
+  color: black;
+`;
+
+function NavItem({ label, link }) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <NavItem>
+      <NavA href={link}>{label}</NavA>
+    </NavItem>
   );
 }
 
-export default App;
+function Navigation() {
+  return (
+    <NavBar>
+      <LogoImage src={logoImage} alt="Din mægler logo" />
+      <NavList>
+        <NavItem label="Boliger til salg" link="/" />
+        <NavItem label="Mæglere" link="/om-os" />
+        <NavItem label="Mine favoritter" link="/kontakt" />
+        <NavItem label="Kontakt os" link="/kontakt" />
+      </NavList>
+    </NavBar>
+  );
+}
+
+export default Navigation;
