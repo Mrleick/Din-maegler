@@ -3,6 +3,7 @@ import InformationSection from "../components/InformationSection";
 import NavigationBar from "../components/NavigationBar";
 import HeroSection from "../components/HeroSection";
 import OmOs from "../components/OmOS";
+import Udvalgte from "../components/Udvalgte";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <NavigationBar />
       <HeroSection />
       <OmOs />
+      <Udvalgte />
     </div>
   );
 }

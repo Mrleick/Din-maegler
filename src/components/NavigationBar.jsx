@@ -22,7 +22,7 @@ const NavList = styled.ul`
   gap: 40px;
   list-style: none;
   flex: 6;
-  justify-content: flex-end; // This aligns the ul to the right
+  justify-content: flex-end;
 `;
 
 // Styled-component til li-elementer

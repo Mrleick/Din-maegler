@@ -8,7 +8,7 @@ import HusTwo from "../assets/house2.png";
 
 const OmOsBlock = styled.div`
   max-width: 1110px;
-  margin: 100px auto;
+  margin: 100px auto 70px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 `;
@@ -42,7 +42,6 @@ const SharedDiv = styled.div`
   width: 70px;
   height: 70px;
   display: flex;
-
   justify-content: center;
 `;
 
@@ -92,6 +91,7 @@ function OmOs() {
             text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has normal distribution."
           />
           <P
+            size="18px"
             margin="30px 0 0 0"
             text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
           />
@@ -118,7 +118,7 @@ function OmOs() {
         </StyledOmOS>
       </OmOsBlock>
       <StyledHr />
-      <Features/>
+      <Features />
     </>
   );
 }
