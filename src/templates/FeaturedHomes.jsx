@@ -1,0 +1,66 @@
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import styled from "styled-components";
+import P from "../components/Paragraph";
+import HomeCard from "../components/HomeCard";
+
+const UdvalgteDiv = styled.div`
+  margin: 0 auto;
+  background-color: #f8f8fb;
+`;
+
+const UdvalgteHeader = styled.h1`
+  text-align: center;
+  padding-top: 100px;
+  font-size: 38px;
+  margin-bottom: 30px;
+`;
+
+const UdvalgteCards = styled.div`
+  width: 1110px;
+  margin: 70px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: 30px;
+`;
+
+const FeaturedHomes = () => {
+  const [homes, setHomes] = useState([]);
+
+  useEffect(() => {
+    const fetchHomes = async () => {
+      try {
+        const response = await axios.get(
+          "https://dinmaegler.onrender.com/homes?_limit=4"
+        );
+        if (response.status === 200) {
+          setHomes(response.data);
+        } else {
+          throw new Error(response.statusText);
+        }
+      } catch (error) {
+        console.error("Error fetching homes:", error);
+      }
+    };
+
+    fetchHomes();
+  }, []);
+
+  return (
+    <UdvalgteDiv>
+      <UdvalgteHeader>Udvalgte Boliger</UdvalgteHeader>
+      <P
+        size="18px"
+        text="There are many variations of passages of Lorem Ipsum available but the this in majority have suffered alteration in some"
+      />
+      <UdvalgteCards>
+        {homes.map(home => (
+          <HomeCard key={home.id} data={home} />
+        ))}
+      </UdvalgteCards>
+    </UdvalgteDiv>
+  );
+};
+
+export default FeaturedHomes;

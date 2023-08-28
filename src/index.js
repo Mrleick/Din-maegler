@@ -7,7 +7,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import App from "./App";
-import Home, { HomePageData } from "./pages/home";
+import Home, { HomePageData } from "./pages/Home";
 import "./global.css";
 
 const root = createRoot(document.getElementById("root"));

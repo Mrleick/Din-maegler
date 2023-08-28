@@ -7,6 +7,7 @@ const StyledParagraph = styled.p`
   height: ${(props) => props.height};
   line-height: ${(props) => props.lineHeight};
   margin: ${(props) => props.margin};
+  text-align: ${(props) => props.textalign}; 
 `;
 
 const Paragraph = (props) => {
@@ -18,6 +19,8 @@ const Paragraph = (props) => {
       height={props.height}
       margin={props.margin}
       text={props.text}
+      text-align={props.textalign}
+      
     >
       {props.text}{" "}
       {/* You need to actually render the text inside the paragraph */}

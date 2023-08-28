@@ -1,35 +1,40 @@
+// Import the axios library to send HTTP requests.
 import axios from "axios";
-import { useLoaderData } from "react-router-dom";
 
+// Import the relevant components for the homepage.
 import InformationSection from "../components/InformationSection";
 import NavigationBar from "../components/NavigationBar";
-import HeroSection from "../components/HeroSection";
-import OmOs from "../components/OmOS";
-import Udvalgte from "../templates/Udvalgte";
+import HeroSection from "../components/Hero";
+import OmOs from "../components/OmOs";
+import FeaturedHomes from "../templates/FeaturedHomes";
 
-function App() {
-  const homeData = useLoaderData();
-  console.log("Fetched data for Udvalgte component:", homeData);
-
+// Define the App component.
+function Home() {
+  // Return my components along with data.
   return (
     <>
       <InformationSection />
       <NavigationBar />
       <HeroSection />
       <OmOs />
-      <Udvalgte data={homeData} />
+      <FeaturedHomes />
     </>
   );
 }
 
+// Define the HomePageData export, which is used to fetch the data from the server.
 export const HomePageData = async ({ params }) => {
+  // Send an HTTP GET request to the server.
   const response = await axios.get("https://dinmaegler.onrender.com/homes");
 
+  // Status code of the response.
   if (response.status === 200) {
+    // The request was successful. Return the data from the response.
     return response.data;
   } else {
+    // The request failed. Throw an error with the status text from the response.
     throw new Error(response.statusText);
   }
 };
 
-export default App;
+export default Home;

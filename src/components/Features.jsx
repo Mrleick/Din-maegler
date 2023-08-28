@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import P from "../components/Paragraph";
-
 import feature1 from "../assets/feature1.png";
 import feature2 from "../assets/feature2.png";
 import feature3 from "../assets/feature3.png";
@@ -10,7 +9,7 @@ const FeaturesDiv = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: 70px auto 150px;
-  max-width: 1110px; /* Changed width to max-width */
+  max-width: 1110px;
 `;
 
 const FeaturesImgDiv = styled.div`
