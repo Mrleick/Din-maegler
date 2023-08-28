@@ -1,6 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 import pind from "../assets/pind.png";
+import Button from "../components/Button";
 import P from "./Paragraph";
 
 const SearchBlock = styled.div`
@@ -21,23 +21,14 @@ const SearchInputElement = styled.input`
   font-size: 18px;
   margin-top: 7px;
   margin-right: 10px;
-  border-radius: 4px;
-  border-color: grey;
+  border-radius: 2px;
+  border-color: #d3dee8;
+  border: 1px solid;
   padding-left: 10px;
 `;
 
 const SearchFieldElement = styled.div`
   margin-top: 20px;
-`;
-
-const SearchButtonElement = styled.button`
-  width: 120px;
-  height: 51px;
-  grid-row: 3/4;
-  background-color: #162a41;
-  border-radius: 4px;
-  color: white;
-  cursor: pointer;
 `;
 
 function SearchForm() {
@@ -59,7 +50,7 @@ function SearchForm() {
           text="Hvad skal din næste bolig indeholde"
         />
         <SearchInputElement placeholder="Søg på fx. glaskeramisk komfur, bryggers, kælder eller lignende." />
-        <SearchButtonElement>Søg</SearchButtonElement>
+        <Button width="120px" height="48px" color="white" text="Søg"></Button>
       </SearchFieldElement>
     </SearchBlock>
   );

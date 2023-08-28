@@ -7,6 +7,7 @@ import NavigationBar from "../components/NavigationBar";
 import HeroSection from "../components/Hero";
 import OmOs from "../components/OmOs";
 import FeaturedHomes from "../templates/FeaturedHomes";
+import Subscribe from "../components/Subscribe";
 
 // Define the App component.
 function Home() {
@@ -18,6 +19,7 @@ function Home() {
       <HeroSection />
       <OmOs />
       <FeaturedHomes />
+      <Subscribe />
     </>
   );
 }

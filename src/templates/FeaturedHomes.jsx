@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Button from "../components/Button";
 import styled from "styled-components";
 import P from "../components/Paragraph";
 import HomeCard from "../components/HomeCard";
@@ -7,6 +8,14 @@ import HomeCard from "../components/HomeCard";
 const UdvalgteDiv = styled.div`
   margin: 0 auto;
   background-color: #f8f8fb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const UdvalgteText = styled.div`
+  width: 646px;
+  text-align: center;
 `;
 
 const UdvalgteHeader = styled.h1`
@@ -18,7 +27,7 @@ const UdvalgteHeader = styled.h1`
 
 const UdvalgteCards = styled.div`
   width: 1110px;
-  margin: 70px auto 0;
+  margin: 70px auto 58px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
@@ -49,16 +58,19 @@ const FeaturedHomes = () => {
 
   return (
     <UdvalgteDiv>
-      <UdvalgteHeader>Udvalgte Boliger</UdvalgteHeader>
-      <P
-        size="18px"
-        text="There are many variations of passages of Lorem Ipsum available but the this in majority have suffered alteration in some"
-      />
+      <UdvalgteText>
+        <UdvalgteHeader>Udvalgte Boliger</UdvalgteHeader>
+        <P
+          size="18px"
+          text="There are many variations of passages of Lorem Ipsum available but the this in majority have suffered alteration in some"
+        />
+      </UdvalgteText>
       <UdvalgteCards>
-        {homes.map(home => (
+        {homes.map((home) => (
           <HomeCard key={home.id} data={home} />
         ))}
       </UdvalgteCards>
+      <Button width="178px" height="62px" color="white" text="Se alle boliger"></Button>
     </UdvalgteDiv>
   );
 };

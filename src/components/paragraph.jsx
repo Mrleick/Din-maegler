@@ -23,7 +23,6 @@ const Paragraph = (props) => {
       
     >
       {props.text}{" "}
-      {/* You need to actually render the text inside the paragraph */}
     </StyledParagraph>
   );
 };
