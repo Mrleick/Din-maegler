@@ -5,7 +5,7 @@ import axios from "axios";
 import InformationSection from "../components/InformationSection";
 import NavigationBar from "../components/NavigationBar";
 import HeroSection from "../components/Hero";
-import OmOs from "../components/OmOs";
+import About from "../components/About";
 import FeaturedHomes from "../templates/FeaturedHomes";
 
 // Define the App component.
@@ -16,7 +16,7 @@ function Home() {
       <InformationSection />
       <NavigationBar />
       <HeroSection />
-      <OmOs />
+      <About />
       <FeaturedHomes />
     </>
   );
