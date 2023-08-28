@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import P from "../components/Paragraph";
+import P from "./Paragraph";
 import feature1 from "../assets/feature1.png";
 import feature2 from "../assets/feature2.png";
 import feature3 from "../assets/feature3.png";

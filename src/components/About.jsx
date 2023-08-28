@@ -3,28 +3,15 @@ import styled from "styled-components";
 import Features from "./Features";
 import P from "./Paragraph";
 import erfaring from "../assets/erfaring.png";
-import HusEt from "../assets/house1.png";
+import HouseOne from "../assets/house1.png";
 import HusTwo from "../assets/house2.png";
-
-const OmOsBlock = styled.div`
-  max-width: 1110px;
-  margin: 100px auto 70px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-`;
 
 const StyledErfaringIMG = styled.img`
   max-width: 477px;
   height: 502px;
 `;
 
-const StyledHeader = styled.h2`
-  width: 475px;
-  font-size: 32px;
-`;
-
 const StyledOmOS = styled.div`
-  margin-left: 93px;
   display: grid;
   grid-template-rows: 108px 32px 90px 60px;
   width: 540px;
@@ -72,12 +59,12 @@ const StyledHr = styled.hr`
 function OmOs() {
   return (
     <>
-      <OmOsBlock>
+      <div className="max-w-[1110px] grid grid-cols-2 mx-auto mt-[120px] mb-[70px]">
         <StyledErfaringIMG src={erfaring} alt="38 års erfaring" />
         <StyledOmOS>
-          <StyledHeader>
+          <h2 className="text-4xl font-bold">
             Vi har fulgt danskerne hjem i snart 4 årtier
-          </StyledHeader>
+          </h2>
           <P
             color="#162a41"
             size="18px"
@@ -98,7 +85,7 @@ function OmOs() {
           <StyledOmOsImgDiv>
             <HouseOneDiv>
               <HouseDiv>
-                <StyledOmOsImg src={HusEt} alt="" />
+                <StyledOmOsImg src={HouseOne} alt="" />
               </HouseDiv>
               <CountContainer>
                 <P weight="bold" text="4829" />
@@ -116,7 +103,7 @@ function OmOs() {
             </HouseOneDiv>
           </StyledOmOsImgDiv>
         </StyledOmOS>
-      </OmOsBlock>
+      </div>
       <StyledHr />
       <Features />
     </>

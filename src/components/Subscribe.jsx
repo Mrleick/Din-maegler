@@ -11,7 +11,6 @@ const SubscribeDiv = styled.div`
   background-repeat: no-repeat;
 `;
 
-const SubscribeImg = styled.img``;
 
 const SubscribeMask = styled.div`
   width: 100%;
