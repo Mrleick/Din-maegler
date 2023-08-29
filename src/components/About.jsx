@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Features from "./Features";
-import P from "./Paragraph";
 import erfaring from "../assets/erfaring.png";
 import HouseOne from "../assets/house1.png";
 import HusTwo from "../assets/house2.png";
@@ -65,31 +64,24 @@ function OmOs() {
           <h2 className="text-4xl font-bold">
             Vi har fulgt danskerne hjem i snart 4 årtier
           </h2>
-          <P
-            color="#162a41"
-            size="18px"
-            weight="bold"
-            text="Det synes vi siger noget om os!"
-          />
-          <P
-            color="#162a41"
-            size="18px"
-            margin="16px 0 0 0"
-            text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has normal distribution."
-          />
-          <P
-            size="18px"
-            margin="30px 0 0 0"
-            text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
-          />
+          <p> Det synes vi siger noget om os!</p>
+          <p>
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum is that it has normal distribution.
+          </p>
+          <p>
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout.
+          </p>
           <StyledOmOsImgDiv>
             <HouseOneDiv>
               <HouseDiv>
                 <StyledOmOsImg src={HouseOne} alt="" />
               </HouseDiv>
               <CountContainer>
-                <P weight="bold" text="4829" />
-                <P text="boliger solgt" />
+                <p>4829</p>
+                <p>boliger solgt</p>
               </CountContainer>
             </HouseOneDiv>
             <HouseOneDiv>
@@ -97,8 +89,8 @@ function OmOs() {
                 <StyledOmOsImg src={HusTwo} alt="" />
               </HouseDiv>
               <CountContainer>
-                <P weight="bold" text="158" />
-                <P text="boliger til salg" />
+                <p>158</p>
+                <p>boliger til salg</p>
               </CountContainer>
             </HouseOneDiv>
           </StyledOmOsImgDiv>

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Button from "../components/Button";
 import styled from "styled-components";
-import P from "../components/Paragraph";
 import HomeCard from "../components/HomeCard";
 
 const UdvalgteDiv = styled.div`
@@ -60,17 +59,22 @@ const FeaturedHomes = () => {
     <UdvalgteDiv>
       <UdvalgteText>
         <UdvalgteHeader>Udvalgte Boliger</UdvalgteHeader>
-        <P
-          size="18px"
-          text="There are many variations of passages of Lorem Ipsum available but the this in majority have suffered alteration in some"
-        />
+        <p>
+          There are many variations of passages of Lorem Ipsum available but the
+          this in majority have suffered alteration in some
+        </p>
       </UdvalgteText>
       <UdvalgteCards>
         {homes.map((home) => (
           <HomeCard key={home.id} data={home} />
         ))}
       </UdvalgteCards>
-      <Button width="178px" height="62px" color="white" text="Se alle boliger"></Button>
+      <Button
+        width="178px"
+        height="62px"
+        color="white"
+        text="Se alle boliger"
+      ></Button>
     </UdvalgteDiv>
   );
 };

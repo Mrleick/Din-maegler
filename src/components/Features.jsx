@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import P from "./Paragraph";
 import feature1 from "../assets/feature1.png";
 import feature2 from "../assets/feature2.png";
 import feature3 from "../assets/feature3.png";
@@ -40,8 +39,11 @@ function Features() {
           <FeatureImage src={feature1} alt="" />
         </FeaturesImgDiv>
         <FeaturesText>
-          <P size="24px " weight="bold" text="Bestil et salgstjek" />
-          <P text="Med et Din Mægler Salgstjek bliver du opdateret på værdien af din bolig." />
+          <p>Bestil et salgstjek</p>
+          <p>
+            Med et Din Mægler Salgstjek bliver du opdateret på værdien af din
+            bolig.
+          </p>
         </FeaturesText>
       </FeatureContainer>
       <FeatureContainer>
@@ -49,8 +51,11 @@ function Features() {
           <FeatureImage src={feature2} alt="" />
         </FeaturesImgDiv>
         <FeaturesText>
-          <P size="24px" weight="bold" text="74 butikker" />
-          <P text="Med et Din Mægler Salgstjek bliver du opdateret på værdien af din bolig." />
+          <p>74 butikker</p>
+          <p>
+            Med et Din Mægler Salgstjek bliver du opdateret på værdien af din
+            bolig.
+          </p>
         </FeaturesText>
       </FeatureContainer>
       <FeatureContainer>
@@ -58,11 +63,11 @@ function Features() {
           <FeatureImage src={feature3} alt="" />
         </FeaturesImgDiv>
         <FeaturesText>
-          <P size="24px" weight="bold" text="Tilmeld køberkartotek" />
-          <P
-            color="#2A2C30"
-            text="Med et Din Mægler Salgstjek bliver du opdateret på værdien af din bolig."
-          />
+          <p>Tilmeld køberkartotek</p>
+          <p>
+            Med et Din Mægler Salgstjek bliver du opdateret på værdien af din
+            bolig.
+          </p>
         </FeaturesText>
       </FeatureContainer>
     </FeaturesDiv>
