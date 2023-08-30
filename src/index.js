@@ -7,14 +7,14 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import App from "./App";
-import Home, { HomePageData } from "./pages/home";
+import Home from "./pages/home";
 import "./global.css";
 
 const root = createRoot(document.getElementById("root"));
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route index loader={HomePageData} element={<Home />} />
+      <Route index element={<Home />} />
     </Route>
   )
 );

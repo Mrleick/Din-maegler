@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
 import Button from "../components/Button";
 import styled from "styled-components";
 import HomeCard from "../components/HomeCard";
+import GetHomes from "../hooks/Gethomes";
 
 const UdvalgteDiv = styled.div`
   margin: 0 auto;
@@ -32,28 +31,9 @@ const UdvalgteCards = styled.div`
   justify-content: center;
   gap: 30px;
 `;
-
 const FeaturedHomes = () => {
-  const [homes, setHomes] = useState([]);
-
-  useEffect(() => {
-    const fetchHomes = async () => {
-      try {
-        const response = await axios.get(
-          "https://dinmaegler.onrender.com/homes?_limit=4"
-        );
-        if (response.status === 200) {
-          setHomes(response.data);
-        } else {
-          throw new Error(response.statusText);
-        }
-      } catch (error) {
-        console.error("Error fetching homes:", error);
-      }
-    };
-
-    fetchHomes();
-  }, []);
+  const HomesData = GetHomes();
+  console.log("HomesData:", HomesData);
 
   return (
     <UdvalgteDiv>
@@ -65,7 +45,7 @@ const FeaturedHomes = () => {
         </p>
       </UdvalgteText>
       <UdvalgteCards>
-        {homes.map((home) => (
+        {HomesData.map((home) => (
           <HomeCard key={home.id} data={home} />
         ))}
       </UdvalgteCards>
@@ -78,5 +58,4 @@ const FeaturedHomes = () => {
     </UdvalgteDiv>
   );
 };
-
 export default FeaturedHomes;
