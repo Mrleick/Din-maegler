@@ -38,7 +38,11 @@ function SearchForm() {
 
       <SearchFieldElement>
         <p>Hvad skal din næste bolig indeholde</p>
-        <SearchInputElement placeholder="Søg på fx. glaskeramisk komfur, bryggers, kælder eller lignende." />
+        <SearchInputElement
+          id="search"
+          type="search"
+          placeholder="Søg på fx. glaskeramisk komfur, bryggers, kælder eller lignende."
+        />
         <Button width="120px" height="48px" color="white" text="Søg"></Button>
       </SearchFieldElement>
     </SearchBlock>

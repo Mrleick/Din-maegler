@@ -11,7 +11,6 @@ const SubscribeDiv = styled.div`
   background-repeat: no-repeat;
 `;
 
-
 const SubscribeMask = styled.div`
   width: 100%;
   height: 100%;
@@ -49,7 +48,11 @@ const Subscribe = () => {
           <SubscribeText>
             Tilmeld dig vores nyhedsbrev og hold dig opdateret på boligmarkedet
           </SubscribeText>
-          <SubscribeInput placeholder="Indtast din email adresse" />
+          <SubscribeInput
+            id="email"
+            autoomplete="email"
+            placeholder="Indtast din email adresse"
+          />
         </SubscribeInnerDiv>
       </SubscribeMask>
     </SubscribeDiv>
