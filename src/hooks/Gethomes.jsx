@@ -6,7 +6,7 @@ const GetHomes = () => {
 
   useEffect(() => {
     axios
-      .get("https://dinmaegler.onrender.com/homes?_limit=4")
+      .get("https://dinmaegler.onrender.com/homes")
       .then((response) => {
         if (response.status === 200) {
           console.log("Response data:", response.data);

@@ -50,7 +50,7 @@ const Subscribe = () => {
           </SubscribeText>
           <SubscribeInput
             id="email"
-            autoomplete="email"
+            autoComplete="email"
             placeholder="Indtast din email adresse"
           />
         </SubscribeInnerDiv>
