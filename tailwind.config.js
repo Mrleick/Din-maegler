@@ -9,6 +9,7 @@ module.exports = {
       xl: "1440px",
     },
     colors: {
+      para02: "#7B7B7B",
       shape2: "#EEF7FF",
     },
     fontFamily: {},
