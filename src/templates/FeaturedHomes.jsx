@@ -36,7 +36,7 @@ const FeaturedHomes = () => {
   console.log("HomesData:", HomesData);
 
   return (
-    <UdvalgteDiv>
+    <UdvalgteDiv className="pb-[120px]">
       <UdvalgteText>
         <UdvalgteHeader>Udvalgte Boliger</UdvalgteHeader>
         <p>
@@ -45,11 +45,12 @@ const FeaturedHomes = () => {
         </p>
       </UdvalgteText>
       <UdvalgteCards>
-        {HomesData.map((home) => (
-          <HomeCard key={home.id} data={home} />
-        ))}
+        {HomesData.map((home, index) =>
+          index < 4 ? <HomeCard key={home.id} data={home} /> : null
+        )}
       </UdvalgteCards>
       <Button
+        className="pb-[120px]"
         width="178px"
         height="62px"
         color="white"
