@@ -1,14 +1,13 @@
 import React from "react";
-import GetAgents from "../hooks/Getagents";
+import GetAgents from "../hooks/GetAgents";
 import AgentCard from "../components/AgentCard";
-import Button from "../components/Button";
 
 const FeaturedAgents = () => {
   const AgentsData = GetAgents();
   console.log("AgentsData", AgentsData);
 
   return (
-    <div>
+    <div className="max-w-[1110px] mx-auto">
       <div className="max-w-[640px] mx-auto mt-[126px] mb-[60px] text-center">
         <h2 className="text-[34px] text-center font-bold mb-[16px]">
           Mød vores engagerede medarbejdere
@@ -23,7 +22,9 @@ const FeaturedAgents = () => {
           index < 3 ? <AgentCard agent={agent} key={index} /> : null
         )}
       </div>
-      <Button color="white" text="Se alle mæglere" />
+      <button className="w-[194px] h-[62px] bg-primary text-white block mx-auto mt-[42px] rounded-sm ">
+        Se alle mæglere
+      </button>
     </div>
   );
 };

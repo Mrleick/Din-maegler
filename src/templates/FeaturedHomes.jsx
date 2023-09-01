@@ -1,7 +1,7 @@
 import Button from "../components/Button";
 import styled from "styled-components";
 import HomeCard from "../components/HomeCard";
-import GetHomes from "../hooks/Gethomes";
+import GetHomes from "../hooks/GetHomes";
 
 const UdvalgteDiv = styled.div`
   margin: 0 auto;
