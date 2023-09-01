@@ -1,76 +1,50 @@
 import React from "react";
-import styled from "styled-components";
 import feature1 from "../assets/feature1.png";
 import feature2 from "../assets/feature2.png";
 import feature3 from "../assets/feature3.png";
 
-const FeaturesDiv = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 70px auto 150px;
-  max-width: 1110px;
-`;
-
-const FeaturesImgDiv = styled.div`
-  display: flex;
-  align-items: center;
-  background-color: #eef7ff;
-  width: 50px;
-  height: 50px;
-  justify-content: center;
-  margin-right: 20px;
-`;
-
-const FeatureImage = styled.img``;
-
-const FeaturesText = styled.div`
-  max-width: 250px;
-`;
-
-const FeatureContainer = styled.div`
-  display: flex;
-`;
-
 function Features() {
   return (
-    <FeaturesDiv>
-      <FeatureContainer>
-        <FeaturesImgDiv>
-          <FeatureImage src={feature1} alt="" />
-        </FeaturesImgDiv>
-        <FeaturesText>
-          <p>Bestil et salgstjek</p>
-          <p>
+    <div className="grid grid-cols-3 gap-[30px] max-w-[1110px] mt-[70px] mb-[120px] mx-auto">
+      <div className="flex gap-[12px]">
+        <div className="flex w-[50px] h-[50px] justify-center items-center bg-shape2">
+          <img className="block w-[30px]" src={feature1} alt="" />
+        </div>
+        <div>
+          <h3 className="text-[24px] font-medium">Bestil et salgstjek</h3>
+          <p className="text-[18px] mt-[16px] max-w-[290px]">
             Med et Din Mægler Salgstjek bliver du opdateret på værdien af din
             bolig.
           </p>
-        </FeaturesText>
-      </FeatureContainer>
-      <FeatureContainer>
-        <FeaturesImgDiv>
-          <FeatureImage src={feature2} alt="" />
-        </FeaturesImgDiv>
-        <FeaturesText>
-          <p>74 butikker</p>
-          <p>
-            Med et Din Mægler Salgstjek bliver du opdateret på værdien af din
-            bolig.
+        </div>
+      </div>
+
+      <div className="flex gap-[12px]">
+        <div className="flex w-[50px] h-[50px] justify-center items-center bg-shape2">
+          <img className="block w-[30px] h-[30px]" src={feature2} alt="" />
+        </div>
+        <div>
+          <h3 className="text-[24px] font-medium">74 butikker</h3>
+          <p className="text-[18px] mt-[16px] max-w-[290px]">
+            Hos Din Mægler er din bolig til salg i alle vores 74 butikker, som
+            er fordelt rundt om i Danmark.
           </p>
-        </FeaturesText>
-      </FeatureContainer>
-      <FeatureContainer>
-        <FeaturesImgDiv>
-          <FeatureImage src={feature3} alt="" />
-        </FeaturesImgDiv>
-        <FeaturesText>
-          <p>Tilmeld køberkartotek</p>
-          <p>
-            Med et Din Mægler Salgstjek bliver du opdateret på værdien af din
-            bolig.
+        </div>
+      </div>
+
+      <div className="flex gap-[12px]">
+        <div className="flex w-[50px] h-[50px] justify-center items-center bg-shape2">
+          <img className="block w-[30px]" src={feature3} alt="" />
+        </div>
+        <div>
+          <h3 className="text-[24px] font-medium">Tilmeld køberkartotek</h3>
+          <p className="text-[18px] mt-[16px] max-w-[290px]">
+            Når du er tilmeldt vores køberkartotek, bliver du kontaktet inden en
+            ny bolig bliver annonceret.
           </p>
-        </FeaturesText>
-      </FeatureContainer>
-    </FeaturesDiv>
+        </div>
+      </div>
+    </div>
   );
 }
 
