@@ -2,9 +2,10 @@
 import InformationSection from "../components/InformationSection";
 import NavigationBar from "../components/NavigationBar";
 import HeroSection from "../components/Hero";
-import About from "../components/About";
+import About from "../templates/About";
 import FeaturedHomes from "../templates/FeaturedHomes";
 import Subscribe from "../components/Subscribe";
+import FeaturedAgents from "../templates/FeaturedAgents";
 
 // Define the App component.
 function Home() {
@@ -17,6 +18,7 @@ function Home() {
       <About />
       <FeaturedHomes />
       <Subscribe />
+      <FeaturedAgents/>
     </>
   );
 }
