@@ -9,8 +9,11 @@ module.exports = {
       xl: "1440px",
     },
     colors: {
+      primary: "#162A41",
       para02: "#7B7B7B",
       shape2: "#EEF7FF",
+      agentbordercolor: "#D3DEE8",
+      agentshadow: "rgba(0, 115, 225, 0.06)",
     },
     fontFamily: {},
     extend: {},
