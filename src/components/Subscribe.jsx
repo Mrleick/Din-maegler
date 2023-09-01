@@ -6,7 +6,7 @@ const SubscribeDiv = styled.div`
   height: 284px;
   max-width: 1920px;
   color: white;
-  background-size: cover; /* or "contain" depending on what you want */
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 `;
