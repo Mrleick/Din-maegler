@@ -10,6 +10,9 @@ module.exports = {
     },
     colors: {
       primary: "#162A41",
+      second: "#F8F8FB",
+      third: "#FFFFFF",
+      para01: "#333333",
       para02: "#7B7B7B",
       shape2: "#EEF7FF",
       agentbordercolor: "#D3DEE8",
