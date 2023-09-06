@@ -35,11 +35,6 @@ const SubscribeText = styled.h2`
   width: 490px;
 `;
 
-const SubscribeInput = styled.input`
-  width: 540px;
-  height: 74px;
-`;
-
 const Subscribe = () => {
   return (
     <SubscribeDiv>
@@ -48,7 +43,8 @@ const Subscribe = () => {
           <SubscribeText>
             Tilmeld dig vores nyhedsbrev og hold dig opdateret på boligmarkedet
           </SubscribeText>
-          <SubscribeInput
+          <input
+            className="w-[520px] max-h-[78px] pl-[10px] py-[20px] rounded"
             id="email"
             autoComplete="email"
             placeholder="Indtast din email adresse"

@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import App from "./App";
 import Home from "./pages/home";
+import Properties from "./pages/propertylist";
 import "./global.css";
 
 const root = createRoot(document.getElementById("root"));
@@ -15,6 +16,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index element={<Home />} />
+      <Route path="Properties" element={<Properties />} />
     </Route>
   )
 );

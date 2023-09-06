@@ -14,6 +14,7 @@ module.exports = {
       third: "#FFFFFF",
       para01: "#333333",
       para02: "#7B7B7B",
+      shape1: "#D3DEE8",
       shape2: "#EEF7FF",
       agentbordercolor: "#D3DEE8",
       agentshadow: "rgba(0, 115, 225, 0.06)",
