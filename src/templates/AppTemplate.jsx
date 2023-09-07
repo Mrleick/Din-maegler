@@ -5,11 +5,11 @@ import Iphone2 from "../assets/iphone2.png";
 const AppTemplate = () => {
   return (
     <div className="bg-primary mt-[114px] flex items-center justify-center">
-      <div>
+      <div className="mr-[46px]">
         <h2 className="text-[38px] text-white max-w-[535px] font-bold">
           Hold dig opdateret på salgsprocessen
         </h2>
-        <p className="text-white max-w-[634px]">
+        <p className="text-[18px] text-white max-w-[634px]">
           Når du sælger din bolig hos Din Mægler, kommunikerer du nemt med den
           ansvarlige mægler eller butik med vores app. Her kan du også se
           statistik på interessen for din bolig i alle vores salgskanaler.

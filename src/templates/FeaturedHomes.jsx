@@ -1,62 +1,34 @@
-import Button from "../components/Button";
-import styled from "styled-components";
 import HomeCard from "../components/HomeCard";
+import { Link } from "react-router-dom";
 import GetHomes from "../hooks/GetHomes";
 
-const UdvalgteDiv = styled.div`
-  margin: 0 auto;
-  background-color: #f8f8fb;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const UdvalgteText = styled.div`
-  width: 646px;
-  text-align: center;
-`;
-
-const UdvalgteHeader = styled.h1`
-  text-align: center;
-  padding-top: 100px;
-  font-size: 38px;
-  margin-bottom: 30px;
-`;
-
-const UdvalgteCards = styled.div`
-  width: 1110px;
-  margin: 70px auto 58px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
-  gap: 30px;
-`;
 const FeaturedHomes = () => {
   const HomesData = GetHomes();
   console.log("HomesData:", HomesData);
 
   return (
-    <UdvalgteDiv className="pb-[120px]">
-      <UdvalgteText>
-        <UdvalgteHeader>Udvalgte Boliger</UdvalgteHeader>
-        <p>
+    <div className="bg-second flex flex-col pb-[120px]">
+      <div className="pt-[120px] text-center max-w-[645px] mx-auto">
+        <h2 className="text-[38px] text-heading1 font-bold">
+          Udvalgte Boliger
+        </h2>
+        <p className="mt-[16px]">
           There are many variations of passages of Lorem Ipsum available but the
           this in majority have suffered alteration in some
         </p>
-      </UdvalgteText>
-      <UdvalgteCards>
+      </div>
+
+      <div className="grid grid-cols-2 gap-[30px] mt-[60px] max-w-[1110px] self-center">
         {HomesData.map((home, index) =>
           index < 4 ? <HomeCard key={home.id} data={home} /> : null
         )}
-      </UdvalgteCards>
-      <Button
-        className="pb-[120px]"
-        width="178px"
-        height="62px"
-        color="white"
-        text="Se alle boliger"
-      ></Button>
-    </UdvalgteDiv>
+      </div>
+      <button className="bg-primary max-w-[178px] mt-[52px] rounded-sm h-[62px] text-white self-center">
+        <Link className="text-[18px] px-[32px]" to="Properties">
+          Se alle boliger
+        </Link>
+      </button>
+    </div>
   );
 };
 export default FeaturedHomes;

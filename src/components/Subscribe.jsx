@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import SubBg from "../assets/Subscribe.png";
+import { Link } from "react-router-dom";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const SubscribeDiv = styled.div`
   background-image: url(${SubBg});
@@ -43,12 +45,21 @@ const Subscribe = () => {
           <SubscribeText>
             Tilmeld dig vores nyhedsbrev og hold dig opdateret på boligmarkedet
           </SubscribeText>
-          <input
-            className="w-[520px] max-h-[78px] pl-[10px] py-[20px] rounded"
-            id="email"
-            autoComplete="email"
-            placeholder="Indtast din email adresse"
-          />
+          <div className="flex relative">
+            <input
+              className="w-[520px] max-h-[78px] pl-[12px] py-[20px] rounded"
+              id="email"
+              autoComplete="email"
+              placeholder="Indtast din email adresse "
+            />
+            <Link className="absolute self-center right-[22px]">
+              <FaArrowRightLong
+                className="text-[29px]"
+                icon={FaArrowRightLong}
+                style={{ color: "#000000" }}
+              />
+            </Link>
+          </div>
         </SubscribeInnerDiv>
       </SubscribeMask>
     </SubscribeDiv>

@@ -9,6 +9,7 @@ module.exports = {
       xl: "1440px",
     },
     colors: {
+      heading1: "#263048",
       primary: "#162A41",
       second: "#F8F8FB",
       third: "#FFFFFF",

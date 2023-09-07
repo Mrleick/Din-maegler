@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const HomeCardDiv = styled.div`
+  width: 540px;
+  max-width: 540px;
   border-radius: 5px;
   display: grid;
   background-color: white;
@@ -17,7 +19,7 @@ const HomeImage = styled.img`
 `;
 
 const HomeCardText = styled.div`
-padding: 30px 24px;
+  padding: 30px 24px;
 `;
 
 const HomeCard = ({ data }) => {

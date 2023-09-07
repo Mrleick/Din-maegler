@@ -7,8 +7,6 @@ import FeaturedHomes from "../templates/FeaturedHomes";
 import Subscribe from "../components/Subscribe";
 import FeaturedAgents from "../templates/FeaturedAgents";
 import AppTemplate from "../templates/AppTemplate";
-import FooterTemplate from "../templates/FooterTemplate";
-
 // Define the App component.
 function Home() {
   // Return my components along with data.
@@ -22,7 +20,6 @@ function Home() {
       <Subscribe />
       <FeaturedAgents />
       <AppTemplate />
-      <FooterTemplate />
     </>
   );
 }
