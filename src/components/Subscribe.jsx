@@ -56,7 +56,7 @@ const Subscribe = () => {
               <FaArrowRightLong
                 className="text-[29px]"
                 icon={FaArrowRightLong}
-                style={{ color: "#000000" }}
+                style={{ color: "#162A41" }}
               />
             </Link>
           </div>
