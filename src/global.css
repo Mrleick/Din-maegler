@@ -9,6 +9,23 @@
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  max-width: 100%;
-  max-height: 100%;
+}
+
+
+/* Styles for the slider component */
+.slider {
+  height: 1px;
+  background-color: #ddd;
+  margin-top: 10px;
+}
+
+/* Styles for the slider thumb */
+.slider .thumb {
+  bottom: -7px;
+  height: 16px;
+  position: absolute;
+  width: 16px;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+  cursor: grab;
 }

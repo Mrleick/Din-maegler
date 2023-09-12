@@ -1,12 +1,8 @@
 import Footer from "../components/Footer";
 import Logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPhone,
-  faPaperPlane,
-  faLocationDot,
-} from "@fortawesome/free-solid-svg-icons";
+import { FaPhone, FaPaperPlane } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
 
 const FooterTemplate = () => {
   return (
@@ -32,7 +28,7 @@ const FooterTemplate = () => {
             <div className="bg-white flex flex-col px-[50px] py-[50px] gap-[32px] w-[444px] rounded shadow-lg shadow-agentshadow">
               <div className="flex gap-[12px] max-h-[60px] max-w-[333px]">
                 <div className="flex text-white w-[60px] h-[60px] bg-primary rounded-[50%] items-center justify-center">
-                  <FontAwesomeIcon className="fa-xl" icon={faPhone} />
+                  <FaPhone className="fa-xl" />
                 </div>
                 <div>
                   <p className="text-[12px]">Ring til os</p>
@@ -41,7 +37,7 @@ const FooterTemplate = () => {
               </div>
               <div className="flex gap-[12px] max-h-[60px] max-w-[333px]">
                 <div className="flex text-white w-[60px] h-[60px] bg-primary rounded-[50%] items-center justify-center">
-                  <FontAwesomeIcon className="fa-xl" icon={faPaperPlane} />
+                  <FaPaperPlane className="fa-xl" />
                 </div>
                 <div>
                   <p className="text-[12px]">Send en mail</p>
@@ -50,7 +46,7 @@ const FooterTemplate = () => {
               </div>
               <div className="flex gap-[12px] max-h-[60px] max-w-[340px]">
                 <div className="flex text-white w-[60px] h-[60px] bg-primary rounded-[50%] items-center justify-center">
-                  <FontAwesomeIcon className="fa-xl" icon={faLocationDot} />
+                  <FaLocationDot className="fa-xl" />
                 </div>
                 <div>
                   <p className="text-[12px]">Butik</p>

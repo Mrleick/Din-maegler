@@ -1,6 +1,4 @@
 // Import the relevant components for the homepage.
-import InformationSection from "../components/InformationSection";
-import NavigationBar from "../components/NavigationBar";
 import HeroSection from "../components/Hero";
 import About from "../templates/About";
 import FeaturedHomes from "../templates/FeaturedHomes";
@@ -12,8 +10,6 @@ function Home() {
   // Return my components along with data.
   return (
     <>
-      <InformationSection />
-      <NavigationBar />
       <HeroSection />
       <About />
       <FeaturedHomes />

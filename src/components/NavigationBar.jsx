@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import logoImage from "../assets/logo.png";
+import { Link } from "react-router-dom";
 
 const NavBar = styled.div`
   display: flex;
@@ -11,7 +12,7 @@ const NavBar = styled.div`
 `;
 // Styled-component til logoet
 const LogoImage = styled.img`
-  width: 269px;
+  width: 296px;
   height: 49px;
   cursor: pointer;
 `;
@@ -28,26 +29,24 @@ const NavList = styled.ul`
 // Styled-component til li-elementer
 const NavItem = styled.li``;
 
-const NavA = styled.a`
-  text-decoration: none;
-  color: black;
-`;
 function Navigation() {
   return (
     <NavBar>
-      <LogoImage src={logoImage} alt="Din mægler logo" />
+      <Link to="/">
+        <LogoImage src={logoImage} alt="Din mægler logo" />
+      </Link>
       <NavList>
         <NavItem>
-          <NavA href="/">Boliger til salg</NavA>
+          <Link to="Properties">Boliger til salg</Link>
         </NavItem>
         <NavItem>
-          <NavA href="/om-os">Mæglere</NavA>
+          <Link>Mæglere</Link>
         </NavItem>
         <NavItem>
-          <NavA href="/kontakt">Mine favoritter</NavA>
+          <Link>Mine favoritter</Link>
         </NavItem>
         <NavItem>
-          <NavA href="/kontakt">Kontakt os</NavA>
+          <Link>Kontakt os</Link>
         </NavItem>
       </NavList>
     </NavBar>

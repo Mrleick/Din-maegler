@@ -15,13 +15,18 @@ module.exports = {
       third: "#FFFFFF",
       para01: "#333333",
       para02: "#7B7B7B",
-      shape1: "#D3DEE8",
+      shape01: "#D3DEE8",
       shape2: "#EEF7FF",
+      maskbg: "#33485c",
       agentbordercolor: "#D3DEE8",
       agentshadow: "rgba(0, 115, 225, 0.06)",
     },
     fontFamily: {},
-    extend: {},
+    extend: {
+      backgroundImage: {
+        banner: "url('./assets/banner.png')",
+      },
+    },
   },
 
   plugins: [],

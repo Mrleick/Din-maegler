@@ -1,11 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faUser,
-  faPaperPlane,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons";
+import { FaUser, FaPaperPlane, FaPhone } from "react-icons/fa";
 
 // Constants
 const whiteColor = "#fff";
@@ -62,16 +57,16 @@ function infoBar() {
       <StyledLogin>
         <LinksContainer>
           <StyledLink href="">
-            <FontAwesomeIcon icon={faPaperPlane} />
+            <FaPaperPlane />
             4000@dinmaegler.com
           </StyledLink>
           <StyledLink href="">
-            <FontAwesomeIcon icon={faPhone} />
+            <FaPhone />
             +45 7070 4000
           </StyledLink>
         </LinksContainer>
         <StyledText>
-          <FontAwesomeIcon icon={faUser} /> Log In
+          <FaUser /> Log In
         </StyledText>
       </StyledLogin>
     </StyledBar>
