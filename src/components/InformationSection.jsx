@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FaUser, FaPaperPlane, FaPhone } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 // Constants
 const whiteColor = "#fff";
@@ -38,18 +39,6 @@ const StyledLink = styled.a`
   }
 `;
 
-const StyledText = styled.p`
-  color: ${whiteColor};
-  margin: 0;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-
-  & > svg {
-    margin-right: 5px;
-  }
-`;
-
 // Navbar Component
 function infoBar() {
   return (
@@ -65,9 +54,10 @@ function infoBar() {
             +45 7070 4000
           </StyledLink>
         </LinksContainer>
-        <StyledText>
-          <FaUser /> Log In
-        </StyledText>
+        <Link to="Login" className="flex items-center text-[18px]">
+          <FaUser className="w-[18px] h-[18px] mr-[8px]" />
+          Log ind
+        </Link>
       </StyledLogin>
     </StyledBar>
   );

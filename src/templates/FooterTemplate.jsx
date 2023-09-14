@@ -87,8 +87,6 @@ const FooterTemplate = () => {
             </div>
           </div>
           {/* Kontakt END */}
-
-          {/* FOOTER NAV START */}
         </div>
       </div>
       <Footer />

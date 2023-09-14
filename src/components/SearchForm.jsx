@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Button from "./Button";
 function SearchForm() {
   return (
-    <div className="p-[32px]">
+    <div className="bg-white max-w-[920px] w-full mx-auto px-[32px] py-[32px]">
       <p className="text-[20px] font-medium">
         Søg blandt 158 boliger til salg i 74 butikker
       </p>

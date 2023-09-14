@@ -9,6 +9,7 @@ import {
 import App from "./App";
 import Home from "./pages/home";
 import Properties from "./pages/propertylist";
+import Login from "./pages/LoginPage";
 import "./global.css";
 
 const root = createRoot(document.getElementById("root"));
@@ -17,10 +18,10 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />}>
       <Route index element={<Home />} />
       <Route path="Properties" element={<Properties />} />
+      <Route path="Login" element={<Login />} />
     </Route>
   )
 );
-
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />

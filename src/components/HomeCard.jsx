@@ -1,15 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-const HomeCardDiv = styled.div`
-  width: 540px;
-  max-width: 540px;
-  border-radius: 5px;
-  display: grid;
-  background-color: white;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-`;
-
 const HomeImage = styled.img`
   width: 100%;
   height: 100%;
@@ -25,7 +16,7 @@ const HomeCard = ({ data }) => {
     data.adress1 + (data.adress2 ? ` •  ${data.adress2}` : "");
 
   return (
-    <HomeCardDiv>
+    <div className="w-[100%] max-w-[540px] shadow-xl">
       <HomeImage src={data.images[0].url} alt="" />
       <div className="py-[26px] px-[24px]">
         <p className="font-medium text-2xl mb-[10px]">{adress1And2}</p>
@@ -43,7 +34,7 @@ const HomeCard = ({ data }) => {
           Kr. {data.price.toLocaleString()}
         </p>
       </div>
-    </HomeCardDiv>
+    </div>
   );
 };
 
