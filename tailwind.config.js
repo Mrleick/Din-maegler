@@ -23,8 +23,13 @@ module.exports = {
     },
     fontFamily: {},
     extend: {
+      boxShadow: {
+        xl: "0 10px 30px rgba(0, 115, 225, 0.06)",
+      },
+
       backgroundImage: {
         banner: "url('./assets/banner.png')",
+        hero: "url('./assets/hero.jpg')",
       },
     },
   },
