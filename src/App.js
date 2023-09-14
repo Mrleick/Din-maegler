@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Footer from "./templates/FooterTemplate";
 import Topbar from "./components/InformationSection";
 import Nav from "./components/NavigationBar";
+import { ScrollRestoration } from "react-router-dom";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Nav />
       <Outlet />
       <Footer />
+      <ScrollRestoration />
     </div>
   );
 }
