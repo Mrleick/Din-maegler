@@ -3,6 +3,7 @@ import Footer from "./templates/FooterTemplate";
 import Topbar from "./components/InformationSection";
 import Nav from "./components/NavigationBar";
 import { ScrollRestoration } from "react-router-dom";
+import "./global.css";
 
 function App() {
   return (

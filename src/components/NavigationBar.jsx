@@ -40,7 +40,7 @@ function Navigation() {
           <Link to="Properties">Boliger til salg</Link>
         </NavItem>
         <NavItem>
-          <Link>Mæglere</Link>
+          <Link to="agents">Mæglere</Link>
         </NavItem>
         <NavItem>
           <Link>Mine favoritter</Link>

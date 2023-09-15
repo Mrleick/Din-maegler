@@ -5,7 +5,9 @@ import Banner from "../components/Banner";
 import GetHomes from "../hooks/GetHomes";
 
 const Propertylist = () => {
+  // Min homes data fra api 
   const Homes = GetHomes();
+
   const [selectedPropertyType, setSelectedPropertyType] = useState("type");
   const [priceRange, setPriceRange] = useState([0, 12000000]);
 

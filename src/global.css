@@ -29,3 +29,9 @@
   background-color: #C4C4C4;
   cursor: grab;
 }
+
+.strokeme {
+  color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}

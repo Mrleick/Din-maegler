@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import GetAgents from "../hooks/GetAgents";
 import AgentCard from "../components/AgentCard";
 
@@ -22,9 +23,11 @@ const FeaturedAgents = () => {
           index < 3 ? <AgentCard agent={agent} key={index} /> : null
         )}
       </div>
-      <button className="w-[194px] h-[62px] bg-primary text-white block mx-auto mt-[42px] rounded-sm ">
-        Se alle mæglere
-      </button>
+      <Link to="Agents">
+        <button className="w-[194px] h-[62px] bg-primary text-white block mx-auto mt-[42px] rounded-sm ">
+          Se alle mæglere
+        </button>
+      </Link>
     </div>
   );
 };

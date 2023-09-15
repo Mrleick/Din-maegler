@@ -10,7 +10,9 @@ import App from "./App";
 import Home from "./pages/home";
 import Properties from "./pages/propertylist";
 import Login from "./pages/LoginPage";
+import Agents from "./pages/Agents";
 import "./global.css";
+import ErrorPage from "./pages/Errorpage";
 
 const root = createRoot(document.getElementById("root"));
 const router = createBrowserRouter(
@@ -18,7 +20,9 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />}>
       <Route index element={<Home />} />
       <Route path="Properties" element={<Properties />} />
+      <Route path="Agents" element={<Agents />} />
       <Route path="Login" element={<Login />} />
+      <Route path="*" element={<ErrorPage />} />
     </Route>
   )
 );
