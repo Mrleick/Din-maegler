@@ -39,11 +39,11 @@ const LoginPage = () => {
               Twitter
             </Link>
           </div>
-          <p className="mt-[40px] text-center">
-            Har du ikke en konto?
-            <Link className="text-[blue]"> Opret bruger.</Link>
-          </p>
+          <p className="mt-[40px] text-center">Har du ikke en konto?</p>
         </form>
+        <Link to="/Register" className="text-[blue]">
+          Opret bruger.
+        </Link>
       </div>
     </>
   );

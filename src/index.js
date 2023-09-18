@@ -10,6 +10,7 @@ import App from "./App";
 import Home from "./pages/home";
 import Properties from "./pages/propertylist";
 import Login from "./pages/LoginPage";
+import Register from "./pages/RegisterPage";
 import Agents from "./pages/Agents";
 import "./global.css";
 import ErrorPage from "./pages/Errorpage";
@@ -19,9 +20,10 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index element={<Home />} />
-      <Route path="Properties" element={<Properties />} />
-      <Route path="Agents" element={<Agents />} />
-      <Route path="Login" element={<Login />} />
+      <Route path="/Properties" element={<Properties />} />
+      <Route path="/Agents" element={<Agents />} />
+      <Route path="/Login" element={<Login />} />
+      <Route path="/Register" element={<Register />} />
       <Route path="*" element={<ErrorPage />} />
     </Route>
   )

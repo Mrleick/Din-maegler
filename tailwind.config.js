@@ -10,6 +10,7 @@ module.exports = {
     },
     colors: {
       heading1: "#263048",
+      heading2: "#2A2C30",
       primary: "#162A41",
       second: "#F8F8FB",
       third: "#FFFFFF",
