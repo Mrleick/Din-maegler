@@ -37,13 +37,13 @@ function Navigation() {
       </Link>
       <NavList>
         <NavItem>
-          <Link to="Properties">Boliger til salg</Link>
+          <Link to="/boliger">Boliger til salg</Link>
         </NavItem>
         <NavItem>
-          <Link to="agents">Mæglere</Link>
+          <Link to="/mæglere">Mæglere</Link>
         </NavItem>
         <NavItem>
-          <Link>Mine favoritter</Link>
+          <Link to="/favoritter">Mine favoritter</Link>
         </NavItem>
         <NavItem>
           <Link>Kontakt os</Link>

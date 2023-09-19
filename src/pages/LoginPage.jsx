@@ -1,52 +1,131 @@
+// Importer nødvendige biblioteker og komponenter
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
 import Banner from "../components/Banner";
+import * as yup from "yup";
+import { Link, useNavigate } from "react-router-dom";
+import { useUser } from "../Authentication/UserAuth";
 import Button from "../components/Button";
-import { Link } from "react-router-dom";
+import FormInput from "../components/Forminput";
 
-const LoginPage = () => {
+// Definer et valideringsskema ved hjælp af "yup" for email- og password-felterne
+const schema = yup
+  .object({
+    email: yup
+      .string()
+      .email("Din email skal have formen: ditnavn@mail.dk")
+      .required("Email er påkrævet"),
+    password: yup.string().required("Password er påkrævet"),
+  })
+  .required();
+
+// Definer hovedkomponenten for login-siden
+const Login = () => {
+  // Brug "useUser" hook til at få adgang til brugeroplysninger og sætte brugerdata
+  const { setUser } = useUser();
+  // Brug "useNavigate" hook til at få adgang til navigationsfunktionen
+  const navigate = useNavigate();
+
+  // Brug "useForm" hook til at initialisere formularvalidering
+  // og få adgang til forskellige formularrelaterede funktioner og tilstande
+  const {
+    register,
+    setError,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({ mode: "onBlur", resolver: yupResolver(schema) });
+
+  // Funktion, der udføres, når brugeren indsender formularen
+  const onSubmit = (data) => {
+    // Send en POST-anmodning til serveren med email og password
+    fetch("https://dinmaegler.onrender.com/auth/local", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        identifier: data.email,
+        password: data.password,
+      }),
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error(`${response.status} ${response.statusText}`);
+        }
+      })
+      .then((data) => {
+        // Hvis anmodningen er vellykket, gem brugerdata og naviger til hovedsiden
+        setUser(data);
+        navigate("/");
+      })
+      .catch((err) => {
+        // Hvis der opstår en fejl, angiv fejlbeskeder på email- og password-felterne
+        setError("email", {
+          type: "custom",
+          message: "Ugyldige login oplysninger. Prøv igen...",
+        });
+        setError("password", {
+          type: "custom",
+          message: "Ugyldige login oplysninger. Prøv igen...",
+        });
+      });
+  };
+
+  // Returner JSX (visuel repræsentation af login-siden)
   return (
     <>
+      {/* Banner med titlen "Log ind" */}
       <Banner title="Log ind" />
-      <div className="flex flex-col items-center max-w-[920px] my-[120px] shadow-xl border border-shape01 rounded py-[72px] mx-auto">
-        <h3 className="text-[32px] font-medium">Log ind på din konto</h3>
-
-        <form className="w-[100%] max-w-[540px] flex flex-col">
-          <p className="mb-[8px]">Email</p>
-          <input
-            className="border border-shape01 pl-[10px] py-[10px] mb-[24px] rounded"
+      <div className="w-fit mx-auto shadow my-20 py-10 px-20">
+        <h2 className="text-center font-bold text-xl text-heading_2">
+          Log ind på din konto
+        </h2>
+        {/* Formular til email og password med validering */}
+        <form
+          className="py-10 flex flex-col gap-6"
+          onSubmit={handleSubmit(onSubmit)}
+        >
+          <FormInput
             label="Email"
             placeholder="Email"
+            errorMessage={errors.email?.message}
+            register={register("email")}
           />
-          <p className="mb-[8px]">Password</p>
-          <input
-            className="border border-shape01 pl-[10px] py-[10px] mb-[24px] rounded"
+          <FormInput
             label="Password"
             type="password"
             placeholder="Password"
+            errorMessage={errors.password?.message}
+            register={register("password")}
           />
-
+          {/* "Log ind" knap, der udløser onSubmit-funktionen */}
           <Button className="buttonStyle cursor-pointer" type="submit">
             Log ind
           </Button>
-          <p className="mb-[16px] mt-[40px]">Log ind med</p>
-          <div className="flex gap-[15px]">
-            <Link className="w-[100%] max-w-[170px] py-[15px] font-medium text-white text-center bg-[#DD4B39]">
-              Google
-            </Link>
-            <Link className="w-[100%] max-w-[170px] py-[15px] font-medium text-white text-center bg-[#3B5999]">
-              Facebook
-            </Link>
-            <Link className="w-[100%] max-w-[170px] py-[15px] font-medium text-white text-center bg-[#162A41]">
-              Twitter
-            </Link>
-          </div>
-          <p className="mt-[40px] text-center">Har du ikke en konto?</p>
         </form>
-        <Link to="/Register" className="text-[blue]">
-          Opret bruger.
-        </Link>
+        <p className="text-paragraph mb-2">Log ind med</p>
+        {/* Knapper til login med Google, Facebook og Twitter */}
+        <div className="flex gap-4 mb-6">
+          <button className="w-[170px] text-white text-center py-[15px] bg-[#DD4B39]">
+            Google
+          </button>
+          <button className="w-[170px] text-white bg-[#3B5999]">
+            Facebook
+          </button>
+          <button className="w-[170px] text-white bg-primary">Twitter</button>
+        </div>
+        {/* Link til registreringssiden, hvis brugeren ikke har en konto */}
+        <p className="text-center">
+          Har du ikke en konto?{" "}
+          <Link className="text-[#2F80ED]" to="/opret">
+            Opret bruger.
+          </Link>
+        </p>
       </div>
     </>
   );
 };
 
-export default LoginPage;
+export default Login;

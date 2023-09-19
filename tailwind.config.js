@@ -18,9 +18,11 @@ module.exports = {
       para02: "#7B7B7B",
       shape01: "#D3DEE8",
       shape2: "#EEF7FF",
+      shape3: "#33628D",
       maskbg: "#33485c",
       agentbordercolor: "#D3DEE8",
       agentshadow: "rgba(0, 115, 225, 0.06)",
+      errorfooterbg: "#25517A",
     },
     fontFamily: {},
     extend: {

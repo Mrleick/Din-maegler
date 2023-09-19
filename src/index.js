@@ -6,12 +6,15 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
+import { UserProvider } from "./Authentication/UserAuth";
 import App from "./App";
 import Home from "./pages/home";
 import Properties from "./pages/propertylist";
+import Agents from "./pages/Agents";
+import Favorites from "./pages/Favorites";
 import Login from "./pages/LoginPage";
 import Register from "./pages/RegisterPage";
-import Agents from "./pages/Agents";
+
 import "./global.css";
 import ErrorPage from "./pages/Errorpage";
 
@@ -20,16 +23,19 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index element={<Home />} />
-      <Route path="/Properties" element={<Properties />} />
-      <Route path="/Agents" element={<Agents />} />
-      <Route path="/Login" element={<Login />} />
-      <Route path="/Register" element={<Register />} />
+      <Route path="/boliger" element={<Properties />} />
+      <Route path="/mæglere" element={<Agents />} />
+      <Route path="/favoritter" element={<Favorites />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/opret" element={<Register />} />
       <Route path="*" element={<ErrorPage />} />
     </Route>
   )
 );
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <UserProvider>
+      <RouterProvider router={router} />
+    </UserProvider>
   </React.StrictMode>
 );

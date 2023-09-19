@@ -62,16 +62,16 @@ const FooterTemplate = () => {
             <div>
               <h3 className="text-[24px] font-medium">Quick Links</h3>
               <nav className="flex flex-col leading-10 mt-[16px]">
-                <Link className="text-[18px] text-para01" to="Properties">
+                <Link className="text-[18px] text-para01" to="/boliger">
                   Boliger til salg
                 </Link>
-                <Link className="text-[18px] text-para01" to="Properties">
+                <Link className="text-[18px] text-para01" to="/mæglere">
                   Mæglere
                 </Link>
                 <Link className="text-[18px] text-para01" to="Properties">
                   Kontakt os
                 </Link>
-                <Link className="text-[18px] text-para01" to="Properties">
+                <Link className="text-[18px] text-para01" to="/login">
                   Log in / bliv bruger
                 </Link>
               </nav>
