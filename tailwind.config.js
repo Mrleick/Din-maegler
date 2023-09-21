@@ -11,11 +11,11 @@ module.exports = {
     colors: {
       heading1: "#263048",
       heading2: "#2A2C30",
+      para01: "#333333",
+      para02: "#7B7B7B",
       primary: "#162A41",
       second: "#F8F8FB",
       third: "#FFFFFF",
-      para01: "#333333",
-      para02: "#7B7B7B",
       shape01: "#D3DEE8",
       shape2: "#EEF7FF",
       shape3: "#33628D",

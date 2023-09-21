@@ -46,7 +46,7 @@ function Navigation() {
           <Link to="/favoritter">Mine favoritter</Link>
         </NavItem>
         <NavItem>
-          <Link>Kontakt os</Link>
+          <Link to="/kontakt">Kontakt os</Link>
         </NavItem>
       </NavList>
     </NavBar>

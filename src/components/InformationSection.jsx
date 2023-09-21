@@ -54,7 +54,7 @@ function infoBar() {
             +45 7070 4000
           </StyledLink>
         </LinksContainer>
-        <Link to="Login" className="flex items-center text-[18px]">
+        <Link to="/login" className="flex items-center text-[18px]">
           <FaUser className="w-[18px] h-[18px] mr-[8px]" />
           Log ind
         </Link>

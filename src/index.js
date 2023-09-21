@@ -12,6 +12,7 @@ import Home from "./pages/home";
 import Properties from "./pages/propertylist";
 import Agents from "./pages/Agents";
 import Favorites from "./pages/Favorites";
+import Contact from "./pages/Contact";
 import Login from "./pages/LoginPage";
 import Register from "./pages/RegisterPage";
 
@@ -26,6 +27,7 @@ const router = createBrowserRouter(
       <Route path="/boliger" element={<Properties />} />
       <Route path="/mæglere" element={<Agents />} />
       <Route path="/favoritter" element={<Favorites />} />
+      <Route path="/kontakt" element={<Contact />} />
       <Route path="/login" element={<Login />} />
       <Route path="/opret" element={<Register />} />
       <Route path="*" element={<ErrorPage />} />

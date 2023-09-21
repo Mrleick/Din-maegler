@@ -18,15 +18,16 @@ const FeaturedAgents = () => {
           Kontakt en af vores medarbejdere.
         </p>
       </div>
-      <div className="flex max-w-[1134px] mx-auto gap-[40px]">
+      <div className="flex max-w-[1134px] mx-auto gap-[40px] mb-[42px]">
         {AgentsData.map((agent, index) =>
           index < 3 ? <AgentCard agent={agent} key={index} /> : null
         )}
       </div>
-      <Link to="Agents">
-        <button className="w-[194px] h-[62px] bg-primary text-white block mx-auto mt-[42px] rounded-sm ">
-          Se alle mæglere
-        </button>
+      <Link
+        to="Agents"
+        className="flex justify-center py-[16px] w-[194px] bg-primary font-medium text-white rounded-sm mx-auto "
+      >
+        Se alle mæglere
       </Link>
     </div>
   );

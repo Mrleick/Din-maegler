@@ -5,7 +5,6 @@ import Banner from "../components/Banner";
 import * as yup from "yup";
 import { Link, useNavigate } from "react-router-dom";
 import { useUser } from "../Authentication/UserAuth";
-import Button from "../components/Button";
 import FormInput from "../components/Forminput";
 
 // Definer et valideringsskema ved hjælp af "yup" for email- og password-felterne
@@ -79,7 +78,7 @@ const Login = () => {
       {/* Banner med titlen "Log ind" */}
       <Banner title="Log ind" />
       <div className="w-fit mx-auto shadow my-20 py-10 px-20">
-        <h2 className="text-center font-bold text-xl text-heading_2">
+        <h2 className="text-[30px] text-center font-medium">
           Log ind på din konto
         </h2>
         {/* Formular til email og password med validering */}
@@ -101,20 +100,22 @@ const Login = () => {
             register={register("password")}
           />
           {/* "Log ind" knap, der udløser onSubmit-funktionen */}
-          <Button className="buttonStyle cursor-pointer" type="submit">
+          <button className="bg-primary rounded-sm text-white py-[15px] font-medium" type="submit">
             Log ind
-          </Button>
+          </button>
         </form>
         <p className="text-paragraph mb-2">Log ind med</p>
         {/* Knapper til login med Google, Facebook og Twitter */}
         <div className="flex gap-4 mb-6">
-          <button className="w-[170px] text-white text-center py-[15px] bg-[#DD4B39]">
+          <button className="w-[170px] rounded-sm text-white text-center font-medium py-[15px] bg-[#DD4B39]">
             Google
           </button>
-          <button className="w-[170px] text-white bg-[#3B5999]">
+          <button className="w-[170px] rounded-sm text-white font-medium bg-[#3B5999]">
             Facebook
           </button>
-          <button className="w-[170px] text-white bg-primary">Twitter</button>
+          <button className="w-[170px] rounded-sm text-white font-medium bg-primary">
+            Twitter
+          </button>
         </div>
         {/* Link til registreringssiden, hvis brugeren ikke har en konto */}
         <p className="text-center">

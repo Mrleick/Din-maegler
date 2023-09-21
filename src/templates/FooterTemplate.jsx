@@ -68,7 +68,7 @@ const FooterTemplate = () => {
                 <Link className="text-[18px] text-para01" to="/mæglere">
                   Mæglere
                 </Link>
-                <Link className="text-[18px] text-para01" to="Properties">
+                <Link className="text-[18px] text-para01" to="/kontakt">
                   Kontakt os
                 </Link>
                 <Link className="text-[18px] text-para01" to="/login">
