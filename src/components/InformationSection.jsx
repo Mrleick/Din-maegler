@@ -1,10 +1,7 @@
+import React from "react";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faUser,
-  faPaperPlane,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons";
+import { FaUser, FaPaperPlane, FaPhone } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 // Constants
 const whiteColor = "#fff";
@@ -36,45 +33,34 @@ const StyledLink = styled.a`
   text-decoration: none;
   margin-right: ${marginBetweenLinks};
   display: flex;
-  align-items: center; /* Align the icon vertically */
-  & > svg {
-    margin-right: 5px;
-  }
-`;
-
-const StyledText = styled.p`
-  color: ${whiteColor};
-  margin: 0;
-  cursor: pointer;
-  display: flex;
-  align-items: center; /* Align the icon vertically */
-
+  align-items: center;
   & > svg {
     margin-right: 5px;
   }
 `;
 
 // Navbar Component
-function Navbar() {
+function infoBar() {
   return (
     <StyledBar>
       <StyledLogin>
         <LinksContainer>
           <StyledLink href="">
-            <FontAwesomeIcon icon={faPaperPlane} />
+            <FaPaperPlane />
             4000@dinmaegler.com
           </StyledLink>
           <StyledLink href="">
-            <FontAwesomeIcon icon={faPhone} />
+            <FaPhone />
             +45 7070 4000
           </StyledLink>
         </LinksContainer>
-        <StyledText>
-          <FontAwesomeIcon icon={faUser} /> Log In
-        </StyledText>
+        <Link to="/login" className="flex items-center text-[18px]">
+          <FaUser className="w-[18px] h-[18px] mr-[8px]" />
+          Log ind
+        </Link>
       </StyledLogin>
     </StyledBar>
   );
 }
 
-export default Navbar;
+export default infoBar;
